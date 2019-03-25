@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyBlog</title>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+<body>
+<div class="pageWrap" id="pageWrap">
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+    <header>
+        <div class="b-header-content fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="b-logo">
+                            MyBlog
+                        </div>
+                    </div>
+                    <div class="b-header-nav col-xs-12 col-sm-12 col-md-6 col-lg-7">
+                        <div class="nav-holder">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="Index.html">
+                                        <i class="fa fa-home" aria-hidden="true"></i>&nbsp;首页
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Summary.html">
+                                        <i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;归档
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Source.html">
+                                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;资源
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="About_Me.html">
+                                        <i class="fa fa-feed" aria-hidden="true"></i>&nbsp;关于
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="b-content-holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3 slideInLeft">
+                        <div class="b-aside">
+                            <div class="b-aside-categories">
+                                <h4 class="aside-title">
+                                    <a href="Classification.html">
+                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                        分类
+                                    </a>
+                                </h4>
+                                <ul id="category" class="list-unstyled">
+                                    <li>
+                                        <a href="Classification.html#teaching">教程 <span>(24)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="b-aside-tags">
+                                <h4 class="aside-title">
+                                    <a href="Tag.html">
+                                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                                        标签
+                                    </a>
+                                </h4>
+                                <ul id="tag" class="list-unstyled">
+                                    <li>
+                                        <a href="Tag.html#go">Go</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="b-aside-popular">
+                                <h4 class="aside-title">
+                                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                                    最近文章
+                                </h4>
+                                <ul id="recent" class="list-unstyled">
+                                    <li>
+                                        <a href="Blog_001.html">
+                                            <div class="recent-article">
+                                                1. 关于通用代码和特殊情况之间的冲突
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="article" class="col-xs-12 col-sm-12 col-md-9 slideInRight">
+                        <div class="article">
+                            <div class="b-box-item">
+                                <h1 class="line-title">
+                                    关于通用代码和特殊情况之间的冲突
+                                </h1>
+                                <div class="b-caption">
+                                    <div class="caption-data">
+                                        Go/翻译/教程/语言
+                                    </div>
+                                </div>
+                                <div class="offer-text">
+                                    <p>
+                                        这篇文章研究了 <code>io.Copy</code> 的设计和实现，该函数用可能是最简单的方法连接一个
+                                        <code>Reader</code> 到一个
+                                        <code>Writer</code>：该函数从一个地方传输数据到另一个地方。
+                                    </p>
+                                </div>
+                                <div class="offer-datetime">
+                                    2018-12-06
+                                    <a href="Blog_001.html" class="read-more">
+                                        read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-more text-center">
+                            <button id="button_more" class="btn btn-primary" type="button">
+                                see more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="b-copy text-center">
+            Copyright &copy;<a href="https://github.com/PotoYang" target="_blank">PotoYang</a>
+        </div>
+    </footer>
+</div>
+
+<!-- Global -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Toastr -->
+<script src="js/toastr.js"></script>
+
+<!-- Template -->
+<script src="js/theme.js"></script>
+
+<!-- initData -->
+<script src="js/index.js"></script>
+</body>
+</html>
+

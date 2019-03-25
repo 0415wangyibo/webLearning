@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+<body>
+<div class="pageWrap" id="pageWrap">
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+    <header>
+        <div class="b-header-content fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="b-logo">
+                            MyBlog
+                        </div>
+                    </div>
+                    <div class="b-header-nav col-xs-12 col-sm-12 col-md-6 col-lg-7">
+                        <div class="nav-holder">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="Index.html"><i class="fa fa-home" aria-hidden="true">首页</i></a>
+                                </li>
+                                <li>
+                                    <a href="Summary.html"><i class="fa fa-folder-open" aria-hidden="true">归档</i></a>
+                                </li>
+                                <li>
+                                    <a href="Source.html"><i class="fa fa-lightbulb-o" aria-hidden="true">资源</i></a>
+                                </li>
+                                <li>
+                                    <a href="About_Me.html"> <i class="fa fa-feed" aria-hidden="true">关于</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 slideInLeft">
+                    <div class="b-aside">
+                        <div class="b-aside-categories">
+                            <h4 class="aside-title">
+                                <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                关于我
+                            </h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fa fa-battery-empty" aria-hidden="true"></i>
+                                    表白不是冲锋陷阵
+                                </li>
+                                <li>
+                                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                    而是摇旗呐喊
+                                </li>
+                                <li>
+                                    <i class="fa fa-beer" aria-hidden="true"></i>
+                                    创建日期：2018-12-17
+                                </li>
+                                <li>
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
+                                    作者：<a href="https://github.com/PotoYang/">PotoYang</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    坐标：广东-深圳
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 slideInRight">
+                    <div class="b-article-content">
+                        <h2>关于我</h2>
+                        <p>
+                            一分耕耘一分收获，一行代码一毛钱。
+                        </p>
+                        <h2>联系我</h2>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-qq" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-wechat" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa" aria-hidden="true">CSDN</i>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h2>说点什么</h2>
+                        <div></div>
+                        <div class="b-form-holder">
+                            <form id="contact-form" class="b-form">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <input type="text" pattern=".{3,}" class="form-control"
+                                                   id="form-name"
+                                                   name="form-name" required placeholder="昵称">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6">
+                                            <input type="email" pattern=".{3,}" class="form-control"
+                                                   id="form-email"
+                                                   name="form-email" required placeholder="邮箱"
+                                                   autocomplete="off">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12">
+                                                        <textarea class="form-control" id="form-comment"
+                                                                  name="form-comment" required placeholder="说点什么"
+                                                                  autocomplete="off"></textarea>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 text-center">
+                                            <button type="submit" class="btn btn-submit">
+                                                踩一脚
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <hr>
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="b-comment-items-holder">
+                                <div class="b-grid">
+                                    <div class="row equal">
+                                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="b-box-comment-item">
+                                                <img src="media/blog/post-previews/comment-img-1.jpg"
+                                                     class="img-responsive" alt="">
+                                                <div class="b-caption">
+                                                    <h4 class="caption-title">谷溪</h4>
+                                                    <div class="caption-text">
+                                                        <p>
+                                                            爱是一道光芒，停在高高天上，我抬头望是你的脸庞，你眼中的善良让我觉得梦想一定能实现！
+                                                        </p>
+                                                    </div>
+                                                    <div class="caption-info clearfix">
+                                                        <div class="comments">
+                                                            2018-12-17
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="b-box-comment-item">
+                                                <img src="media/blog/post-previews/comment-img-2.jpg"
+                                                     class="img-responsive" alt="">
+                                                <div class="b-caption">
+                                                    <h4 class="caption-title"> 谷溪 </h4>
+                                                    <div class="caption-text">
+                                                        <p>
+                                                            生活，就是有自己喜欢的人，懂你的兄弟，还有爱你的爸妈吧。爱情呢，则是恰好你特别关心的人也特别关心你吧。
+                                                        </p>
+                                                    </div>
+                                                    <div class="caption-info clearfix">
+                                                        <div class="comments">
+                                                            2018-12-15
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="b-box-comment-item">
+                                                <img src="media/blog/post-previews/comment-img-3.jpg"
+                                                     class="img-responsive" alt="">
+
+                                                <div class="b-caption">
+                                                    <h4 class="caption-title">C凯撒</h4>
+                                                    <div class="caption-text">
+                                                        <p>
+                                                            那片笑声让我想起，我的那些花。在我生命，每个角落，静静为我开着。
+                                                        </p>
+                                                    </div>
+                                                    <div class="caption-info clearfix">
+                                                        <div class="comments">
+                                                            2018-12-17
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="b-box-comment-item">
+                                                <img src="media/blog/post-previews/comment-img-4.jpg"
+                                                     class="img-responsive" alt="">
+                                                <div class="b-caption">
+                                                    <h4 class="caption-title"> 恋曲_2009凯 </h4>
+                                                    <div class="caption-text">
+                                                        <p>
+                                                            是你看见干枯沙漠开出花一朵，是你让我每天想要为你写一首情歌！
+                                                        </p>
+                                                    </div>
+                                                    <div class="caption-info clearfix">
+                                                        <div class="comments">
+                                                            2018-12-17
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="b-box-comment-item">
+                                                <div class="b-image">
+                                                    <img src="media/blog/post-previews/comment-img-5.jpg"
+                                                         class="img-responsive" alt="">
+                                                </div>
+                                                <div class="b-caption">
+                                                    <h4 class="caption-title">dota就爱311</h4>
+                                                    <div class="caption-text">
+                                                        <p>
+                                                            还好我有 我这一首情歌
+                                                            轻轻地 轻轻哼着 哭着笑着
+                                                            我的 天长地久
+                                                            命运好幽默 让爱的人都沉默
+                                                            一整个宇宙 换一颗红豆
+                                                        </p>
+                                                    </div>
+                                                    <div class="caption-info clearfix">
+                                                        <div class="comments">
+                                                            2018-12-17
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="b-copy text-center">
+            Copyright &copy;<a href="https://github.com/PotoYang" target="_blank">PotoYang</a>
+        </div>
+    </footer>
+</div>
+
+<!-- Global -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Template -->
+<script src="js/theme.js"></script>
+</body>
+</html>

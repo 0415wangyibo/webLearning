@@ -1,0 +1,417 @@
+/*------------------------------------------------------------------
+[RESPONSIVE CSS]
+
+ - header
+ - footer
+ - offers
+ - typography
+ - blog
+
+- Project:	GoodFood - HTML Template
+- Version:	1.1
+- Author:  Andrey Sokoltsov
+- Profile:	http://themeforest.net/user/andreysokoltsov
+
+-------------------------------------------------------------------*/
+/* header */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .b-header-nav {
+        margin-left: 0;
+    }
+
+    .b-header-nav .nav-holder {
+        margin-left: 0;
+    }
+
+    .b-header-nav #search-toggle {
+        position: relative;
+    }
+
+    .b-header-nav .search-holder input {
+        width: 335px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .b-logo {
+        text-align: center;
+    }
+
+    .b-header-nav .nav-holder {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .b-book {
+        float: none;
+        text-align: center;
+    }
+
+    .b-header-nav .search-holder {
+        left: 145px;
+    }
+
+    .b-header-nav ul li:last-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /*.b-header-nav {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -125%;
+        margin-left: 0;
+        background: #222;
+        opacity: 0;
+        z-index: 1001;
+    }
+
+    .b-header-nav .nav-holder {
+        margin: 0;
+    }
+
+    .b-header-nav ul {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .b-header-nav ul li {
+        display: block;
+        margin: 15px 0 0;
+    }
+
+    .b-header-nav ul li:last-child {
+        margin: 5px 0 15px;
+    }*/
+
+    .open-menu .b-header-nav {
+        top: 40px;
+        opacity: 1;
+    }
+
+    .b-logo {
+        text-align: center;
+    }
+
+    .b-book {
+        float: none !important;
+        text-align: center;
+    }
+
+    #search-toggle {
+        display: none;
+        visibility: hidden;
+    }
+
+    .search-holder {
+        position: static;
+        opacity: 1;
+        z-index: auto;
+    }
+
+    .search-holder input {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .search-holder input::-webkit-input-placeholder {
+        opacity: 1;
+    }
+
+    .search-holder input::-moz-placeholder {
+        opacity: 1;
+    }
+
+    /* Firefox 19+ */
+    .search-holder input:-moz-placeholder {
+        opacity: 1;
+    }
+
+    /* Firefox 18- */
+    .search-holder input:-ms-input-placeholder {
+        opacity: 1;
+    }
+
+    .search-holder .search-submit {
+        display: none;
+        visibility: hidden;
+    }
+
+}
+
+/* footer */
+@media screen and (max-width: 1199px) {
+    .b-form-footer .form-control {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .b-form-footer .form-control {
+        max-width: 75%;
+    }
+
+    .b-footer-instagram .inst-holder {
+        margin: 0 -15px;
+    }
+
+    .b-footer-instagram .inst-holder > [class*='col-'] {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .b-form-footer .form-control {
+        max-width: 100%;
+    }
+
+    .b-footer-instagram .inst-holder > [class*='col-'] {
+        width: 50%;
+    }
+}
+
+/* box item */
+@media screen and (max-width: 767px) {
+    .b-box-item img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .b-box-item .b-caption {
+        visibility: hidden;
+    }
+}
+
+/* typography */
+@media screen and (max-width: 767px) {
+    .first-title {
+        font-size: 46px;
+    }
+}
+
+/* blog */
+@media screen and (max-width: 1199px) {
+    .b-article-content {
+        padding-top: 25px;
+    }
+
+    .b-article-main {
+        padding-left: 0;
+    }
+
+    .b-box-item.b-blog-item .b-caption {
+        padding: 0 8px 25px;
+    }
+
+    .b-grid-list .b-box-item .b-image {
+        width: 30%;
+    }
+
+    .b-grid-list .b-box-item .b-caption {
+        padding: 15px 15px 15px;
+    }
+
+    .b-grid-list .b-box-item .b-caption .caption-data {
+        margin-top: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .b-aside-categories ul li {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .b-aside-categories ul li:last-child {
+        margin-right: 0;
+    }
+
+    .article-aside .b-article-content {
+        padding-top: 55px;
+    }
+
+    .b-grid-list .b-box-item .b-image {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .b-grid-list .b-box-item .b-image {
+        float: none;
+        width: 100%;
+    }
+
+    .b-grid-list .b-box-item .b-caption {
+        padding: 0 25px 25px;
+        overflow: visible;
+    }
+
+    .b-grid-list .b-box-item .b-caption .caption-data {
+        margin-top: -55px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    .b-comment-item .comment-userpic {
+        float: none;
+        margin: 0 0 8px;
+    }
+
+    .b-comment-item .comment-text p {
+        padding-right: 0;
+    }
+
+    .b-comment-item .b-sub-comment {
+        margin-left: 25px;
+    }
+
+    .b-blog-items-holder .row > [class*='col-'] {
+        width: 100% !important;
+    }
+
+    .b-similar-holder .row > [class*='col-'] {
+        width: 100% !important;
+    }
+}
+
+/* offers */
+@media screen and (max-width: 1199px) {
+    .b-offer-item .offer-caption {
+        margin-left: -10px;
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .b-offer-item .row {
+        margin: 0 auto;
+    }
+
+    .b-offer-item .offer-caption {
+        margin-left: 0;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .b-offer-item .offer-caption .offer-datetime .offer-data,
+    .b-offer-item .offer-caption .offer-datetime .offer-time {
+        float: none;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .bootstrap-datetimepicker-widget.dropdown-menu {
+        width: 293px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .bootstrap-datetimepicker-widget.dropdown-menu {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .bootstrap-datetimepicker-widget.dropdown-menu {
+        width: 290px;
+    }
+}
+
+/* menu */
+@media screen and (max-width: 767px) {
+    .b-menu {
+        margin-bottom: 55px;
+    }
+
+    .b-menu .nav-tabs > li {
+        padding-right: 20px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .b-menu-item .menu-item-img {
+        float: none;
+        margin: 0 0 15px;
+    }
+}
+
+/* home */
+@media screen and (max-width: 1700px) {
+    .b-home-about {
+        background-position-x: -15%;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .b-home-about {
+        background-position-x: -35%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .b-home-about {
+        background-position-x: -275px;
+    }
+
+    .b-about-text {
+        padding: 40px 0 0;
+    }
+
+    .b-about-text .b-quote {
+        width: 85%;
+    }
+
+    .b-ofweek {
+        height: auto;
+        padding: 95px 0;
+    }
+
+    .ofweek-item .b-box-item .b-caption {
+        padding: 0 10px 20px;
+    }
+
+    .ofweek-item .b-box-item .b-caption .caption-data {
+        margin-right: 10px;
+    }
+
+    .b-home-blog-holder .b-box-item .b-caption .caption-data {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .b-home-about {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .b-home-about {
+        background: none;
+    }
+
+    .b-about-text .b-text p {
+        padding: 0;
+    }
+
+    .b-about-text .b-quote {
+        width: 95%;
+    }
+
+    .ofweek-item .b-box-item .b-caption {
+        padding: 0 5px 20px;
+    }
+}

@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+<body>
+<div class="pageWrap" id="pageWrap">
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+    <header>
+        <div class="b-header-content fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="b-logo">
+                            MyBlog
+                        </div>
+                    </div>
+                    <div class="b-header-nav col-xs-12 col-sm-12 col-md-6 col-lg-7">
+                        <div class="nav-holder">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="Index.html"><i class="fa fa-home" aria-hidden="true">首页</i></a>
+                                </li>
+                                <li>
+                                    <a href="Summary.html"><i class="fa fa-folder-open" aria-hidden="true">归档</i></a>
+                                </li>
+                                <li>
+                                    <a href="Source.html"><i class="fa fa-lightbulb-o" aria-hidden="true">资源</i></a>
+                                </li>
+                                <li>
+                                    <a href="About_Me.html"> <i class="fa fa-feed" aria-hidden="true">关于</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="b-content-holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3 slideInLeft">
+                        <div class="b-aside">
+                            <div class="b-aside-categories">
+                                <h4 class="aside-title">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                    Go 方法（第二部分）
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)">Michał Łowicki</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)">2016-11-03</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)">Views <span>(1)</span></a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-comment" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)">Comments <span>(2)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 slideInRight">
+                        <div class="b-blog-items-holder">
+                            <div class="row equal">
+                                <div class="b-article-content">
+                                    <p>这篇文章介绍了关于 Go 语言中方法的剩余部分。强烈建议先阅读<a href='https://studygolang.com/articles/14061'>第一部分</a>
+                                        的介绍部分。</p>
+                                    <h2>方法表达式</h2>
+                                    <p>如果有这样一个类型 T，它的方法集中包含方法 M，则 T.M 会生成一个与方法 M 几乎相同且带有签名的方法，这称为 <em>方法表达式</em>。不同之处在于，它额外附带的第一个参数与
+                                        M 的接收者类型相等。</p>
+                                    <pre><code>package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+func PrintFunction(val interface{}) {
+	t := reflect.TypeOf(val)
+	fmt.Printf("Is variadic: %v\n", t.IsVariadic())
+	for i := 0; i < t.NumIn(); i++ {
+		fmt.Printf("Parameter #%v: %v\n", i, t.In(i))
+	}
+}
+
+type T struct{}
+
+func (t T) M(text string, number int) {}
+func (t *T) N(map[string]int)         {}
+func main() {
+	PrintFunction(T.M)
+	PrintFunction((*T).M)
+	PrintFunction((*T).N)
+}
+</code></pre>
+                                    <p>输出：</p>
+                                    <pre><code>Is variadic: false
+Parameter #0: main.T
+Parameter #1: string
+Parameter #2: int
+Is variadic: false
+Parameter #0: *main.T
+Parameter #1: string
+Parameter #2: int
+Is variadic: false
+Parameter #0: *main.T
+Parameter #1: map[string]int</code></pre>
+                                    <p>如果方法 M 不在类型 T 的方法集中，使用表达式 <code>T.M</code> 会导致错误 <code>invalid method expression
+                                        T.N (needs pointer receiver: (*T).N)</code>。</p>
+                                    <p>在上面的片段中，有一个有趣的案例 <code>PrintFunction((*T).M)</code>，即使方法 M 拥有的是值接收器，它仍然使用 <code>*main.T</code>
+                                        的第一个参数创建方法。Go 的运行时会在后台传递指针，创建副本并传递给方法。使用这种方式，方法无法访问原始值。</p>
+                                    <pre><code>type T struct {
+	name string
+}
+
+func (t T) M() {
+	t.name = "changed"
+}
+func (t *T) N() {
+	t.name = "changed"
+}
+func main() {
+	t := T{name: "Michał"}
+	(*T).M(&t)
+	fmt.Println(t.name)
+	(*T).N(&t)
+	fmt.Println(t.name)
+}</code></pre>
+                                    <p>输出：</p>
+                                    <pre><code>Michał
+changed</code></pre>
+                                    <p>可以从接口类型创建方法表达式：</p>
+                                    <pre><code>package main
+
+import "fmt"
+
+type T struct {
+	name string
+}
+
+func (t T) M() {
+	fmt.Println(t.name)
+}
+
+type I interface {
+	M()
+}
+
+func main() {
+	t1 := T{name: "Michał"}
+	t2 := T{name: "Tom"}
+	m := I.M
+	m(t1)
+	m(t2)
+}
+</code></pre>
+                                    <p>输出：</p>
+                                    <pre><code>Michał
+Tom</code></pre>
+                                    <h2><a name='header-n18' class='md-header-anchor '></a>方法值</h2>
+                                    <p>与类型和<em>方法表达式</em>类似，使用表达式可以得到一个带有接收器的方法，这就是<em>方法值</em>。如果有表达式 <em>x</em>，则 <em>x.M</em>
+                                        和方法 M 一样可以使用同样的参数调用。当然，方法 M 需要在类型 x 的方法集中，如果 x 是可寻址类型，M 应该在类型
+                                        <code>&amp;x</code> 的方法集中。</p>
+                                    <pre><code>type T struct {
+	name string
+}
+
+func (t *T) M(string) {}
+func (t T) N(float64) {}
+func main() {
+	t := T{name: "Michał"}
+	m := t.M
+	n := t.N
+	m("foo")
+	n(1.1)
+}</code></pre>
+                                    <h2><a name='header-n21' class='md-header-anchor '></a>提升方法</h2>
+                                    <p>如果一个结构包含内嵌（匿名）的属性，那么这个属性的方法也处于该结构类型的方法集中。</p>
+                                    <p>上面的 Go 程序输出 <code>Michał</code> 是完全正确的。说嵌入到结构类型中属性的方法属于该类型的方法集是有确切原因的：</p>
+                                    <h3><a name='header-n25' class='md-header-anchor '></a>#1</h3>
+                                    <p>如果结构类型 U 包含了内嵌属性 T，那么方法集 S 和 <code>*S</code> 包含带有接收器 T 的提升方法。另外，方法集
+                                        <code>*S</code> 包含的是带有接收器 <code>*T</code> 的提升方法。</p>
+                                    <p>上面的程序输出：</p>
+                                    <p>从本文介绍的第一部分，我们应当知晓的是语言规范中的附加调用规则：</p>
+                                    <blockquote><p>如果 x 是可寻址的，并且 &amp;x 的方法集中包含 m，(&amp;x).m() 可以简写为 x.m()。</p>
+                                    </blockquote>
+                                    <p>所以尽管方法 N 不是类型 U 的方法集的一部分，我们仍可以使用 <code>u.N()</code> 这样的调用。</p>
+                                    <h3><a name='header-n34' class='md-header-anchor '></a>#2</h3>
+                                    <p>如果结构类型 U 包含内嵌属性 <code>*T</code>，那么方法集 S 和 <code>*S</code> 中包带有接收器 T 和
+                                        <code>*T</code> 的提升方法。</p>
+                                    <hr/>
+                                    <p>via: <a href='https://medium.com/golangspec/methods-in-go-part-ii-2b4cc42c5cb6'
+                                               target='_blank' class='url'>https://medium.com/golangspec/methods-in-go-part-ii-2b4cc42c5cb6</a>
+                                    </p>
+                                    <p>作者：<a href='https://medium.com/@mlowicki'>Michał Łowicki</a>
+                                        译者：<a href='https://github.com/tyrodw'>Tyrodw</a>
+                                        校对：<a href='https://github.com/polaris1119'>polaris1119</a></p>
+                                    <p>本文由 <a href='https://github.com/studygolang/GCTT'>GCTT</a> 原创编译，<a
+                                            href='https://studygolang.com/'>Go 中文网</a> 荣誉推出</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="b-copy text-center">
+            Copyright &copy;<a href="https://github.com/PotoYang" target="_blank">PotoYang</a>
+        </div>
+    </footer>
+</div>
+
+<!-- Global -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Template -->
+<script src="js/theme.js"></script>
+</body>
+</html>

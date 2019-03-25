@@ -1,0 +1,287 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+ - Default colors
+ - header
+ - footer
+
+- Project:	GoodFood - HTML Template
+- Version:	1.1
+- Author:  Andrey Sokoltsov
+
+-------------------------------------------------------------------*/
+/*Default colors*/
+.demo_changer .demo-icon {
+    background: #555555;
+}
+
+/* logo */
+.b-logo {
+    color: #555555;
+}
+
+/* buttons */
+.btn-primary,
+.btn-submit,
+.btn-submit-big {
+    background: #555555;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus,
+.btn-submit:hover,
+.btn-submit:active,
+.btn-submit:focus,
+.btn-submit:active:focus,
+.btn-submit-big:hover,
+.btn-submit-big:active,
+.btn-submit-big:focus,
+.btn-submit-big:active:focus {
+    background: transparent;
+    border-color: #555555;
+    color: #555555;
+}
+
+.btn-secondary {
+    border-color: #555555;
+    color: #555555;
+}
+
+.btn-secondary:hover {
+    background: #555555;
+}
+
+.btn-subsc {
+    border-color: #555555;
+}
+
+.btn-subsc:hover {
+    background: #555555;
+}
+
+.b-filter .bootstrap-select:hover {
+    border-color: #555555;
+}
+
+.b-filter .bootstrap-select .dropdown-toggle::after {
+    background: #555555;
+}
+
+.b-filter .bootstrap-select.open {
+    border-color: #555555;
+}
+
+.b-view span:hover {
+    color: #555555;
+}
+
+.b-view .active-view {
+    color: #555555;
+}
+
+.comment-buttons button:hover {
+    color: #555555;
+}
+
+/* owl slider dots */
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #555555;
+}
+
+@media screen and (max-width: 767px) {
+    .owl-theme .owl-dots .owl-dot.active span {
+        background: #555555 !important;
+    }
+}
+
+/* header */
+.b-topline-socials a:hover {
+    color: #555555;
+}
+
+.b-header-nav ul li a:hover {
+    color: #555555;
+}
+
+.search-holder input {
+    border-color: #555555;
+}
+
+.search-holder .search-submit {
+    color: #555555;
+}
+
+/* footer */
+.b-footer-socials a:hover {
+    color: #555555;
+}
+
+/* typography */
+.second-title {
+    color: #555555;
+}
+
+.article-title {
+    color: #555555;
+}
+
+.additional-title {
+    color: #555555;
+}
+
+.line-title {
+    color: #555555;
+}
+
+.line-title:after {
+    background: #555555;
+}
+
+.b-menu-heading .title {
+    color: #555555;
+}
+
+.b-back-link a:hover {
+    color: #555555;
+}
+
+.b-back-link i {
+    color: #555555;
+}
+
+.b-quote .quote-icon {
+    color: #555555;
+}
+
+.b-chef .chef-caption .name {
+    color: #555555;
+}
+
+.b-chef .chef-socials a:hover {
+    color: #555555;
+}
+
+/* contact */
+.contact-info-item .icon {
+    color: #555555;
+}
+
+.b-form .form-control:focus {
+    -webkit-box-shadow: inset 0px 0px 2px 2px rgba(85, 85, 85, 1);
+    -moz-box-shadow: inset 0px 0px 2px 2px rgba(85, 85, 85, 1);
+    box-shadow: inset 0px 0px 2px 2px rgba(85, 85, 85, 1);
+}
+
+/* bootstrap datetimepicker */
+.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+    background: #555555;
+}
+
+.bootstrap-datetimepicker-widget table td.day:hover::before {
+    background-color: #555555;
+}
+
+.bootstrap-datetimepicker-widget table td.today {
+    color: #555555;
+}
+
+.bootstrap-datetimepicker-widget table td.active:before,
+.bootstrap-datetimepicker-widget table td.active:hover::before {
+    background-color: #555555;
+}
+
+/* blog */
+.b-article-info .b-article-author .name {
+    color: #555555;
+}
+
+.b-article-info .b-article-share a:hover {
+    color: #555555;
+}
+
+.b-article-info .b-tags a:hover {
+    color: #555555;
+}
+
+.b-page-head-info .b-name .author .name {
+    color: #555555;
+}
+
+.b-head-socials .title,
+.b-head-tags .title {
+    color: #555555;
+}
+
+.b-head-socials a:hover,
+.b-head-tags a:hover {
+    color: #555555;
+}
+
+/* box-item */
+.b-box-item .b-caption .caption-data {
+    background: #555555;
+}
+
+.b-box-item .b-caption .caption-info .read-more {
+    color: #555555;
+}
+
+.b-box-item .b-caption .caption-title a:hover {
+    color: #555555;
+}
+
+/* aside block */
+.b-aside-categories {
+    color: #555555;
+}
+
+.b-aside-categories ul a:hover {
+    color: #555555;
+}
+
+.b-aside-tags {
+    color: #555555;
+}
+
+.b-aside-tags a:hover {
+    background: #555555;
+}
+
+.b-aside-popular {
+    color: #555555;
+}
+
+.b-popular-item .popular-caption .popular-title a:hover {
+    color: #555555;
+}
+
+/* offers */
+.b-offer-item .offer-caption .offer-datetime span {
+    color: #555555;
+}
+
+/* menu */
+.b-menu .nav-tabs > li::after {
+    color: #555555;
+}
+
+.b-menu .nav > li > a:hover,
+.b-menu .nav > li > a:active,
+.b-menu .nav > li > a:focus {
+    color: #555555;
+}
+
+.b-menu .nav-tabs > li.active > a,
+.b-menu .nav-tabs > li.active > a:hover,
+.b-menu .nav-tabs > li.active > a:focus {
+    color: #555555;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #6E7173;
+}
+
+.b-blog-items-holder .b-article-content p {
+    color: #4f4f4f;
+}

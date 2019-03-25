@@ -1,0 +1,125 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+ - Typography
+
+- Project:	GoodFood - HTML Template
+- Version:	1.1
+- Author:  Andrey Sokoltsov
+
+-------------------------------------------------------------------*/
+/*Typography*/
+@font-face {
+    font-family: Annabelle;
+    src: url("../fonts/Annabelle.ttf");
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.b-logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.b-logo a {
+    display: inline-block;
+}
+
+p {
+    color: #7a7979;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.first-title {
+    font-family: 'Lora', serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 5px 0 25px;
+    line-height: 1.4;
+}
+
+.second-title {
+    font-family: 'Annabelle', sans-serif;
+    font-size: 36px;
+    margin: 0 0 15px;
+}
+
+.third-title {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.article-title {
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 35px;
+}
+
+.additional-title {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 45px;
+}
+
+.little-title {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.aside-title {
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.line-title {
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 24px 0 0 0;
+    position: relative;
+}
+
+.b-menu-heading .title {
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    position: relative;
+}
+
+.b-menu-heading .subtitle {
+    font-family: 'Annabelle', sans-serif;
+    font-size: 36px;
+    margin: 0;
+    color: #464545;
+}
+
+.b-back-link {
+    font-size: 18px;
+    color: #858585;
+}
+
+.b-back-link i {
+    margin-right: 3px;
+    font-size: 16px;
+}

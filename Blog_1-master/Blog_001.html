@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+<body>
+<div class="pageWrap" id="pageWrap">
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+    <header>
+        <div class="b-header-content fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="b-logo">
+                            MyBlog
+                        </div>
+                    </div>
+                    <div class="b-header-nav col-xs-12 col-sm-12 col-md-6 col-lg-7">
+                        <div class="nav-holder">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="Index.html"><i class="fa fa-home" aria-hidden="true">首页</i></a>
+                                </li>
+                                <li>
+                                    <a href="Summary.html"><i class="fa fa-folder-open" aria-hidden="true">归档</i></a>
+                                </li>
+                                <li>
+                                    <a href="Source.html"><i class="fa fa-lightbulb-o" aria-hidden="true">资源</i></a>
+                                </li>
+                                <li>
+                                    <a href="About_Me.html"> <i class="fa fa-feed" aria-hidden="true">关于</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="b-content-holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3 slideInLeft">
+                        <div class="b-aside">
+                            <div class="b-aside-categories">
+                                <h4 class="aside-title">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                    <a href="https://blog.gopheracademy.com/advent-2018/generic-code-vs-special-cases/">
+                                        关于通用代码和特殊情况之间的冲突
+                                    </a>
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        作者：<a href="https://disqus.com/">Andrei Tudor Călin</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        日期：2018-12-06
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)">浏览：（3）</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-comment" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)">评论：（12）</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-mail-reply-all" aria-hidden="true"></i>
+                                        译者：<a href="https://github.com/PotoYang/">PotoYang</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                                        校对：<a href="javascript:void(0)"></a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                        备注：本文由 GCTT 原创编译，<a href="https://studygolang.com/"><b>Go 中文网</b></a>荣誉推出
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                        <a class="b-blog-share" data-toggle="modal" data-target="#shareModal">分享</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 模态框（Modal） -->
+                    <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        <i class="fa fa-share-alt"></i>
+                                        分享这篇文章
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="fa fa-qq fa-2x" style="color: #4CAFEA" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa fa-wechat fa-2x" style="color: #3FB135"
+                                                   aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa fa-weibo fa-2x" style="color: #E04D69"
+                                                   aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa fa-envelope fa-2x" style="color: #1362A7"
+                                                   aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 slideInRight">
+                        <div class="b-article-content">
+                            <p><code>io.Reader</code> 和 <code>io.Writer</code>
+                                接口几乎出现在所有的Go程序中，并代表了处理数据流的基本构建块。Go 的一个重要特性是，对象如套接字、文件或内存缓冲区的抽象都是用这些接口表示的。当 Go
+                                程序对外部世界说话的时候，它几乎是通过 <code>io.Reader</code>s 和 <code>io.Writer</code>s来表达，无论它使用的是特殊的平台或通信媒介。这种普遍性是编码处理可组合和可重复使用的数据流代码的关键因素
+                                <sup><a href="#fn1" name="fnref1">1</a></sup>。
+                            </p>
+                            <p>
+                                这篇文章研究了 <code>io.Copy</code> 的设计和实现，该函数用可能是最简单的方法连接一个 <code>Reader</code> 到一个
+                                <code>Writer</code>：该函数从一个地方传输数据到另一个地方。
+                            </p>
+                            <p>
+                                通常情况下<sup><a href="#fn2" name="fnref2">2</a></sup>，<code>io.Copy</code>
+                                分配一个缓冲区，然后从源读取器读取到缓冲区和从缓冲区写到目标写程序交替进行。这在许多情况下工作得良好，并且从语义角度来看肯定是正确的。
+                            </p>
+                            <p>
+                                这么说来，如果对于一些特殊的 reader 和 writer的选择，我们可以做得更好吗？我们怎么教授 <code>Copy</code> 呢？
+                            </p>
+                            <p>
+                                使用高级抽象的代码，如 <code>Reader</code> 和 <code>Writer</code>
+                                必须经常回答这些问题，并且必须处理这些冲突。通常来说，不同的平台，编程的语言甚至库都用不同的方法处理这个问题。
+                            </p>
+                            <p>让我们来特别研究一下 <code>io.Copy</code> 这种情况，以期许得到更普遍的智慧。</p>
+                            <h4>一种可能的尝试：教授特定类型的 Copy</h4>
+                            <p>想象一下一个 <code>Copy</code>，看起来像这样：</p>
+                            <pre><code>package hypotheticalio
+
+import "bytes"
+
+func Copy(dst Writer, src Reader) (int64, error) {
+	switch s := src.(type) {
+	case *bytes.Buffer:
+		n, err := dst.Write(s.Bytes())
+		return int64(n), err
+	default:
+		// generic code path
+	}
+}</code></pre>
+                            <p>注意我们假设的 <code>io</code> 包现在如何导入 <code>bytes</code>，以便它可以在 switch 类型中使用
+                                <code>Buffer</code>
+                                类型。这里禁止 <code>bytes</code> 导入 <code>io</code>，因为 Go
+                                不允许循环导入。也许我们还没有注意到这个问题，我们继续前进。</p>
+                            <p>时光流逝，我们发现更值得考虑的特殊情况：</p>
+                            <pre><code>package hypotheticalio
+
+import (
+	"bytes"
+	"net"
+	"os"
+)
+
+func Copy(dst Writer, src Reader) (int, error) {
+	switch s := src.(type) {
+	case *bytes.Buffer:
+		n, err := dst.Write(s.Bytes())
+		return int64(n), err
+	case *net.TCPConn:
+		return platformSpecificThings(dst, s)
+	case *os.File:
+		return differentPlatformSpecificCode(dst, s)
+	default:
+		// generic code path
+	}
+}</code></pre>
+                            <p><code>Copy</code> 的代码被改变了很多，尽管代码的<em>意思</em>没有任何的改变。不仅如此，<code>Cpoy</code>
+                                现在关注特定平台的位，它了解操作系统、网络等等。它过去很好而且通用，但是现在很难维护混乱的特殊情况。</p>
+                            <p>似乎是有些事情出了问题。这个 <code>Copy</code> <em>确实</em>适用于特殊情况和通用代码，但它付出了可怕的代价去这样做，并且它对世界的其他地方施加了可怕的限制。
+                            </p><h4><a name='header-n16' class='md-header-anchor '></a>也许是一个更好的尝试：使用接口将Copy与世界分离
+                        </h4>
+                            <p>与教授特定类型的 <code>Copy</code> 相反，<code>io</code> 包引入了两个新的接口：<code>ReaderFrom</code>
+                                和 <code>WriterTo</code>。</p>
+                            <p><code>ReaderFrom</code> 可以被认为是一个消费来自一个 <code>Reader</code>
+                                数据的对象。相比之下，<code>WriterTo</code>
+                                可以被认为是一个向 <code>Writer</code> 推入自身数据的对象</p>
+                            <p>从概念上讲，在两种情况下都会出现从一个对象到另一个对象的数据传输，但表达传输的方式会产生不同。<code>Copy</code>
+                                不需要知道它正在使用的类型的任何具体内容。如果它们中的任何一个实现了 <code>ReaderFrom</code> 或
+                                <code>WriterTo</code>，<code>Copy</code> 调用该方法，并且没有执行其他工作。<code>Copy</code>
+                                现在看起来像这样：</p>
+                            <pre><code>package io
+
+func Copy(dst Writer, src Reader) (int64, error) {
+	if wt, ok := src.(WriterTo); ok {
+		return wt.WriteTo(dst)
+	}
+	if rt, ok := dst.(ReaderFrom); ok {
+		return rt.ReadFrom(src)
+	}
+	// generic code path
+}</code></pre>
+                            <p>发生了一些有趣的事情：与之前假设的情景相比，<code>Copy</code>
+                                现在几乎没有理由改变。它再次完全通用。不只是那样，它可以委托给代码片段，这些代码片段和以前一样<em>确实</em>拥有更加具体的知识。</p>
+                            <p>但是，没有什么是免费的，这种松散的耦合也有其成本。通过特定的类型不能够静态地知道 <code>Copy</code>，但是使用类型断言，一定能在运行时动态的被发现。
+                            </p>
+                            <p>有趣的是，通用代码与和特殊情况之间的冲突不是通过凌乱的代码、搞维护成本和过高的导入限制来显示自己，而现在是通过丢失编译时信息而显示出来。对于像
+                                <code>io</code> 这样全世界都导入的包，这当然看上去像是一个值得做的交易。</p>
+                            <p>调用者可以自己定制化 <code>io.Copy</code>，而无需改变函数本身。他们需要做的就是实现 <code>io.ReaderFrom</code> 或
+                                <code>io.WriterTo</code>。标准库在很多地方都像这样做了。例如：</p>
+                            <ul>
+                                <li><code>*bytes.Buffer</code> 有一个 <a
+                                        href='https://golang.org/pkg/bytes/#Buffer.WriteTo'>WriteTo</a>，它将缓冲区注入一个
+                                    <code>io.Writer</code>，以及一个 <a
+                                            href='https://golang.org/pkg/bytes/#Buffer.ReadFrom'>ReadFrom</a>，它从一个
+                                    <code>io.Reader</code> 填充到缓冲区
+                                </li>
+                                <li><code>*net.TCPConn</code> 有一个 <a
+                                        href='https://golang.org/pkg/net/#TCPConn.ReadFrom'>ReadFrom</a>，它可以在大多数平台上使用
+                                    <code>sendfile(2)</code>（或者一个相似的接口）
+                                </li>
+                                <li><code>net/http</code> 对 <code>ResponseWriter</code> 的实现有一个 <a
+                                        href='https://golang.org/src/net/http/server.go#L566'>ReadFrom</a>，它可以使用上述特殊情况下的
+                                    <code>sendfile(2)</code></li>
+                            </ul>
+                            <p>值得注意的是，这些都是优化，不应该以任何形式影响程序的语义。因此，对于 <code>io</code>
+                                包的客户来说可能发生的最糟糕的事情就是特定的优化可能不会起作用。然我们来研究一下这种情况。考虑以下包装类型：</p>
+                            <pre><code>type CountingWriter struct {
+	W io.Writer
+	N int64
+}
+
+func (cw *CountingWriter) Write(b []byte) (int, error) {
+	n, err := cw.W.Write(b)
+	cw.N += int64(n)
+	return n, err
+}</code></pre>
+                            <p>当被用做是 <code>io.Writer</code> 时，<code>CountingWriter</code>
+                                隐藏了来自调用者的底层属性。因此，在运行时检查功能的代码，例如 <code>io.Copy</code>，在查看
+                                <code>*CountingWriter</code>时将会只看到 <code>io.Writer</code>。</p>
+                            <p>然而，在这种情况下需要底层 <code>Witer</code>
+                                的特定功能，调用者需要通过发现有趣的功能和使用更加具体的包装方法去适应自己的情况。在特定情况下这可能非常地困难<sup><a href="#fn3"
+                                                                                               name="fnref3">3</a></sup>。
+                            </p>
+                            <p>此外，请注意为何 <code>io.ReaderFrom</code> 和 <code>io.WriterTo</code> 不出现在
+                                <code>io.Copy</code> 的<em>签名</em>中。相反，它们出现在<em>文档</em>中：一个弱得多的约定。</p><h4><a
+                                name='header-n37' class='md-header-anchor '></a>最后思考</h4>
+                            <p>无论如何，通用代码和特殊情况之间的根本冲突出现在任何处理抽象的代码中。为了适应两者，Go
+                                接口的性质允许组件之间的一种特定松散耦合，但是这种方法并没有其微妙的成本。即便如此，最终结果仍然优雅且易于维护。</p>
+                            <hr/>
+                            <p><a name="fn1">1</a>. Go与平台的对比见 <a
+                                    href='http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/'>red-blue</a>
+                                <sup><a href="#fnref1">return</a></sup></p>
+                            <p><a name="fn2">2</a>. 在 <a
+                                    href='https://github.com/golang/go/blob/112f28defcbd8f48de83f4502093ac97149b4da6/src/io/io.go#L401-L423'>这里</a>
+                                看源码 <sup><a href="#fnref2">return</a></sup></p>
+                            <p><a name="fn3">3</a>. 查看组合（译注：原文单词错误，应为combinatorial）展现的 <a
+                                    href='https://github.com/felixge/httpsnoop'>这个库</a> <sup><a
+                                    href="#fnref3">return</a></sup>
+                            </p>
+                            <p><a href='https://disqus.com/'>comments powered by Disqus</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="b-copy text-center">
+            Copyright &copy;<a href="https://github.com/PotoYang" target="_blank">PotoYang</a>
+        </div>
+    </footer>
+</div>
+
+<!-- Global -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Template -->
+<script src="js/theme.js"></script>
+
+<!--1.分享到QQ空间接口：https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=你的网址&sharesource=qzone&title=你的分享标题&pics=你的分享图片&summary=你的分享描述信息-->
+<!--2.分享给QQ好友接口：http://connect.qq.com/widget/shareqq/index.html?url=你的分享网址&sharesource=qzone&title=你的分享标题&pics=你的分享图片地址&summary=你的分享描述&desc=你的分享简述-->
+<!--3.分享到新浪微博接口：http://service.weibo.com/share/share.php?url=你的分享网址&sharesource=weibo&title=你的分享标题&pic=你的分享图片&appkey=你的key，需要在新浪微博开放平台中申请-->
+
+</body>
+</html>
