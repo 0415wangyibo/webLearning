@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript <b>this</b> 关键字</h2>
+
+<p>在实例中，<b>this</b> 指向了 fullName 方法所属的对象 person。</p>
+
+<p id="demo"></p>
+<p id="test"></p>
+<script>
+    // 创建一个对象
+    var person = {
+        firstName  : "John",
+        lastName   : "Doe",
+        id     : 5566,
+        myFunction : function() {
+            return this;
+        },
+        testFunction : function () {
+            return this.firstName + " " + this.lastName + " " + this.id;
+        }
+    };
+
+    // 显示表单数据
+    document.getElementById("demo").innerHTML = person.myFunction();
+    document.getElementById("test").innerHTML = person.testFunction();
+</script>
+
+</body>
+</html>

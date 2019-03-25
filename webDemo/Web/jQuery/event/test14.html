@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+    </script>
+    <script>
+        <!--此方法已经在1.8中废除-->
+        $(document).ready(function(){
+            //Firefox和chrome会阻止弹框的弹出
+            $(window).unload(function(){
+                alert("Goodbye!");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>当你点击 <a href="http://www.runoob.com">这个链接</a>, 或者关闭窗口，alert 窗口会弹出。</p>
+</body>
+</html>

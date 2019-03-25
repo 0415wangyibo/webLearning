@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+     
+    <title>菜鸟教程(runoob.com)</title> 
+</head>
+<!--模拟游戏系统中的体力管理-->
+<body>
+
+<p>
+    <output id="result"></output>
+</p>
+<div>
+    <input id="cut" type="number" min="1" max="120"/>
+    <button onclick="consume()">消费体力</button>
+</div>
+<div>
+    <input id="add" type="number" min="1" max="120"/>
+    <button onclick="addManual()">增加体力</button>
+</div>
+<p><strong>注意：</strong> Internet Explorer 9 及更早 IE 版本浏览器不支持 Web Workers.</p>
+
+<script>
+    var w;
+    var manual = 0;
+    startWorker();
+
+    function startWorker() {
+        if (typeof(Worker) !== "undefined") {
+            if (typeof(w) == "undefined") {
+                w = new Worker("demo_workers.js");
+            }
+            w.onmessage = function (event) {
+                //六分钟恢复一点体力
+                if (manual < 120) {
+                    if (event.data == 360) {
+                        manual++;
+                        document.getElementById("result").innerHTML = "当前体力为" + manual + "点，恢复下一点体力还需6分0秒";
+                        stopWorker();
+                        startWorker();
+                    } else {
+                        var need = 360 - event.data;
+                        if (need >= 60) {
+                            document.getElementById("result").innerHTML = "当前体力为" + manual + "点，恢复下一点体力还需" + Math.floor(need / 60) + "分" + need % 60 + "秒";
+                        } else {
+                            document.getElementById("result").innerHTML = "当前体力为" + manual + "点，恢复下一点体力还需" + need % 60 + "秒";
+                        }
+                    }
+                } else {
+                    stopWorker();
+                    document.getElementById("result").innerHTML = "当前体力为"+manual+"点，已满";
+                }
+            };
+        } else {
+            document.getElementById("result").innerHTML = "抱歉，你的浏览器不支持 Web Workers...";
+        }
+    }
+
+    function consume() {
+        var cut = document.getElementById("cut").value;
+        if (cut == null || cut == "") {
+            cut = 0;
+        }
+        if (cut > manual) {
+            alert("当前体力不足");
+        } else {
+            if (manual >= 120) {
+                manual = manual - cut;
+                if(manual<120){
+                    startWorker();
+                }else {
+                    document.getElementById("result").innerHTML = "当前体力为"+manual+"点，已满";
+                }
+            } else {
+                manual = manual - cut;
+            }
+        }
+    }
+
+    function addManual() {
+        var add = document.getElementById("add").value;
+        if (add == null || add == "") {
+            add = 0;
+        }
+        add = parseInt(add);
+        if (manual >= 120) {
+            manual = manual + add;
+            document.getElementById("result").innerHTML = "当前体力为"+manual+"点，已满";
+        } else {
+            manual = manual + add;
+            if (manual >= 120) {
+                stopWorker();
+                document.getElementById("result").innerHTML = "当前体力为"+manual+"点，已满";
+            }
+        }
+    }
+
+    function stopWorker() {
+        w.terminate();
+        w = undefined;
+    }
+</script>
+
+</body>
+</html>

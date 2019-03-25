@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<!--当没有参数传入时，和应该是undefined-->
+<p>计算所有参数之和：</p>
+<p id="demo"></p>
+<script>
+    function sumAll() {
+        var i, sum = 0;
+        if (arguments[0] === undefined) {
+            return undefined;
+        }
+        for (i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+
+    document.getElementById("demo").innerHTML =
+        sumAll(1, 123, 500, 115, 44, 88);
+</script>
+
+</body>
+</html>

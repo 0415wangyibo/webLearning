@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .ancestors *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //查询span的长辈元素为ul的元素
+            $("span").parents("ul").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</head>
+
+<body class="ancestors">body (great-great-grandparent)
+<div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)
+        <li>li (direct parent)
+            <span>span</span>
+        </li>
+    </ul>
+</div>
+</body>
+
+</html>

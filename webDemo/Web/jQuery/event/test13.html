@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //当输入框从获得焦点状态变为失去焦点的状态时触发
+            $("input").blur(function(){
+                alert("输入框失去了焦点");
+            });
+        });
+    </script>
+</head>
+<body>
+
+输入你的名字: <input type="text">
+<p>在输入框写些东西，然后点击输入框外，让其失去焦点。</p>
+
+</body>
+</html>

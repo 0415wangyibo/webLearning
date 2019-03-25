@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p> typeof 操作符返回变量或表达式的类型。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+    arr = [1,2,3];
+    if(arr instanceof Array){
+        document.write("arr 是一个数组");
+    } else {
+        document.write("arr 不是一个数组");
+    }
+    function myFunction() {
+        var y = "5";
+        var x = + y;
+        document.getElementById("demo").innerHTML =
+            typeof y + "<br>" + typeof x;
+    }
+</script>
+
+</body>
+</html>

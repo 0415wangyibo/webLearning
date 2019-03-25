@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>在 HTML 中 <b>this</b> 的值, 在全局函数是一个 window 对象。</p>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        return this;
+    }
+    document.getElementById("demo").innerHTML = myFunction();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>设置参数的默认值。</p>
+<p id="demo"></p>
+<script>
+    function myFunction(x, y) {
+        if (y === undefined) {
+            y = 0;
+        }
+        return x * y;
+    }
+    document.getElementById("demo").innerHTML = myFunction(4);
+</script>
+
+</body>
+</html>

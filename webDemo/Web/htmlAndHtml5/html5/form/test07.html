@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<form action="http://192.168.21.29:8055//test/fullName" method="post" id="form1">
+    First name: <input type="text" name="firstName"><br>
+    <input type="submit" value="提交">
+</form>
+
+<p> "Last name" 字段没有在 form 表单之内，但它也是 form 表单的一部分。</p>
+
+Last name: <input type="text" name="lastName" form="form1">
+
+<p><b>注意:</b> IE 不支持 form 属性</p>
+
+</body>
+</html>

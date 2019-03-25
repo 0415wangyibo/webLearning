@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">点我！</button></p>
+<div id="result"></div>
+<p>点击该按钮查看计数器的增加。</p>
+<p>关闭浏览器选项卡(或窗口),重新打开此页面,计数器将重置。</p>
+<script>
+    function clickCounter()
+    {
+        if(typeof(Storage)!=="undefined")
+        {
+            if (sessionStorage.clickcount)
+            {
+                sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+            }
+            else
+            {
+                sessionStorage.clickcount=1;
+            }
+            document.getElementById("result").innerHTML="在这个会话中你已经点击了该按钮 " + sessionStorage.clickcount + " 次 ";
+        }
+        else
+        {
+            document.getElementById("result").innerHTML="抱歉，您的浏览器不支持 web 存储";
+        }
+    }
+</script>
+</body>
+</html>

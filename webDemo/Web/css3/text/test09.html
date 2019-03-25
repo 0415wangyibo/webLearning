@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        p.test1
+        {
+            width:9em;
+            border:1px solid #000000;
+            word-break:keep-all;
+        }
+        /*一行结束时会强行拆词，不管单词的完整性*/
+        p.test2
+        {
+            width:9em;
+            border:1px solid #000000;
+            word-break:break-all;
+        }
+    </style>
+</head>
+<body>
+
+<p class="test1"> This paragraph contains some text. This line will-break-at-hyphenates.</p>
+<p class="test2"> This paragraph contains some text: The lines will break at any character.</p>
+
+<p><b>注意:</b>  word-break 属性不兼容 Opera.</p>
+
+</body>
+</html>

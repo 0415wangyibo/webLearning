@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>局部变量在声明的函数外不可以访问。</p>
+<p id="demo"></p>
+<script>
+    myFunction();
+    document.getElementById("demo").innerHTML = "carName 的类型是：" +  typeof carName;
+    function myFunction()
+    {
+        var carName = "Volvo";
+    }
+</script>
+
+</body>
+</html>

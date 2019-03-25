@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //当文本内容和上次内容不一致时则进行弹框显示
+            $("input").change(function(){
+                alert("文本已被修改");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<input type="text">
+<p>在输入框写一些东西，然后按下 enter 键或点击输入框外部。</p>
+
+</body>
+</html>

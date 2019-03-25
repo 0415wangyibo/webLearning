@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript 变量提升</h2>
+
+<p>var 关键字定义的变量可以在使用后声明，也就是变量可以先使用再声明:</p>
+
+<p id="demo"></p>
+
+<script>
+    carName = "Volvo";
+    document.getElementById("demo").innerHTML = carName;
+    var carName;
+</script>
+
+</body>
+</html>

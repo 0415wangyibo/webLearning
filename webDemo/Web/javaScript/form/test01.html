@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<!--自己搭建的web服务器http://192.168.21.29:8055对post请求进行处理-->
+<form name="myForm" action="http://192.168.21.29:8055//test/name"
+      onsubmit="return validateForm()" method="post">
+    名字: <input type="text" name="name">
+    <input type="submit" value="提交">
+</form>
+<script>
+    function validateForm() {
+        var x = document.forms["myForm"]["name"].value;
+        if (x == null || x == "") {
+            alert("需要输入名字。");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<form action="http://192.168.21.29:8055//test/fullName" method="get">
+    First name: <input type="text" name="firstName"><br>
+    Last name: <input type="text" name="lastName"><br>
+    <input type="submit" value="提交">
+    <input type="submit" formmethod="post" formaction="http://192.168.21.29:8055//test/fullName" value="使用 POST 提交">
+</form>
+
+<p><strong>注意：</strong> Internet Explorer 9及更早 IE 版本不支持 input 标签的 formmethod 属性。</p>
+
+</body>
+</html>

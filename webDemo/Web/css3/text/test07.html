@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div.test
+        {
+            white-space:nowrap;
+            width:12em;
+            overflow:hidden;
+            border:1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+<p>以下 div 容器内的文本无法完全显示，可以看到它被裁剪了。</p>
+<p>div 使用 &quot;text-overflow:ellipsis&quot;:</p>
+
+<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+<p>div 使用 &quot;text-overflow:clip&quot;:</p>
+<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+<p>div 使用自定义字符串 &quot;text-overflow: &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
+<div class="test" style="text-overflow:'>>';">This is some long text that will not fit in the box</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<!--对匹配到的文本使用<strong>标签处理-->
+<script>
+    var str="Is this all there is?";
+    var patt1=/is/gi;
+    document.write(str.replace(patt1,function (subString) { return "<strong>" + arguments[0] + "</strong>"}));
+</script>
+
+</body>
+</html>

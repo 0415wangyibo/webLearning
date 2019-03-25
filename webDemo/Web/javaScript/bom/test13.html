@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>单击按钮每3秒出现一个“Hello”警告框。</p>
+<p>再次点击警告框，经过3秒出现新的警告框，这将一直执行 ...</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction(){
+        setInterval(function(){alert("Hello")},3000);
+    }
+</script>
+
+</body>
+</html>

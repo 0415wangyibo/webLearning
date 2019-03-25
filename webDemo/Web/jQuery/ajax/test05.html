@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+<body>
+<p id="test"></p>
+<button>发送一个 HTTP POST 请求页面并获取返回内容</button>
+<script type='text/javascript'>
+    // 这里要使用拼接好的XML字符串
+    var data = '<root><classCode>cellphone</classCode><city>GuangDong</city></root>';
+    $(document).ready(function(){
+        $("button").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "http://192.168.21.29:8066//test",
+                // data sent is xml
+                contentType: "application/xml; charset=utf-8",
+                // Post 方式，data参数不能为空""，
+                //如果不传参数，也要写成"{}"，否则contentType将不能附加在Request Headers中。
+                data: data,
+                // data in response will expected xml
+                dataType: "xml",
+                anysc: false,
+                success: function (result) {
+                    var myNode = result.getElementsByTagName();
+                    console.log(myNode);
+                    $("#test").text(result.message);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown + ':' + textStatus); // 错误处理
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

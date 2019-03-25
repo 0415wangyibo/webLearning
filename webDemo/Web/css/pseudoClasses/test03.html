@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<!--匹配所有p标签中的第一个i标签-->
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        p > i:first-child
+        {
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p><b>注意:</b> 当 :first-child 作用于 IE8 以及更早版本的浏览器, ！DOCTYPE 必须已经定义.</p>
+</body>
+</html>

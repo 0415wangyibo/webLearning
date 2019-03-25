@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<script>
+    var str = 'runoob';
+    var patt1 = new RegExp('\\w', 'g'); // 有转义作为正则表达式处理
+    var patt2 = new RegExp('\w', 'g');  // 无转义作为字符串处理
+    var patt3 =/\w+/g;  // 与 patt1 效果相同
+    document.write(patt1.test(str));//输出 true
+    document.write("<br>");
+    document.write(patt2.test(str)); //输出 false
+    document.write("<br>");
+    document.write(patt3.test(str));//输出 true
+</script>
+
+</body>
+</html>

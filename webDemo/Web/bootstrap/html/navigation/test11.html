@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 标签页与胶囊式标签页</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>动态标签</h2>
+    <p><strong>提示:</strong> 与 .tab-pane 和 data-toggle="tab" (data-toggle="pill" ) 一同使用, 设置标签页对应的内容随标签的切换而更改。</p>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">首页</a></li>
+        <li><a data-toggle="tab" href="#menu1">菜单 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">菜单 2</a></li>
+        <li><a data-toggle="tab" href="#menu3">菜单 3</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>首页</h3>
+            <p>菜鸟教程 —— 学的不仅是技术，更是梦想！！！</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>菜单 1</h3>
+            <p>这是菜单 1 显示的内容。这是菜单 1 显示的内容。这是菜单 1 显示的内容。</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>菜单 2</h3>
+            <p>这是菜单 2 显示的内容。这是菜单 2 显示的内容。这是菜单 2 显示的内容。</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3>菜单 3</h3>
+            <p>这是菜单 3 显示的内容。这是菜单 3 显示的内容。这是菜单 3 显示的内容。</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

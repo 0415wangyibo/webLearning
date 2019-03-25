@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p> Internet Explorer 8 及更早IE版本不支持 addEventListener() 方法。</p>
+<p>该实例演示了所有浏览器兼容的解决方法。</p>
+<button id="myBtn">点我</button>
+<script>
+    var x = document.getElementById("myBtn");
+    var y = "都不是：";
+    if (x.addEventListener) {
+        y = "主流浏览器："
+        x.addEventListener("click", myFunction);
+    } else if (x.attachEvent) {
+        y = "非主流浏览器："
+        x.attachEvent("onclick", myFunction);
+    }
+
+    function myFunction() {
+        alert(y + "Hello World!");
+    }
+</script>
+
+</body>
+</html>

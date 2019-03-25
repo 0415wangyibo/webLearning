@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<head>
+</head>
+
+<body>
+<p id="demo"></p>
+<p>开启调试工具，在代码执行到第三行前会停止执行。</p>
+<script>
+    var x = 15 * 5;
+    debugger;
+    document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>

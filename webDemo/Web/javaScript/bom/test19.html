@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>简单实现计时功能</title>
+</head>
+<body>
+
+<form>
+    <input type="button" value="开始计时!" onclick="timedText()" />
+    <input type="button" value="暂停计时!" onclick="pauseTime()"/>
+    <input type="button" value="重置时间!" onclick="resetTime()"/>
+    <input type="text" id="txt" value="0 秒"/>
+</form>
+<p>简单实现计时功能。</p>
+<script>
+    var time=1;
+    var timeEvent;
+    function timedText(){
+        var x=document.getElementById('txt');
+        timeEvent=setInterval(function(){x.value=time++ +" 秒"},1000);
+    }
+    function pauseTime() {
+        clearInterval(timeEvent);
+    }
+    function resetTime() {
+        clearInterval(timeEvent);
+        time=1;
+        document.getElementById("txt").value = "0 秒";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //选取p中类里没有url的元素
+            $("p").not(".url").css("background-color","yellow");
+        });
+    </script>
+</head>
+<body>
+
+<h1>欢迎访问我的主页</h1>
+<p>菜鸟教程 (index 0).</p>
+<p class="url test">http://www.runoob.com (index 1)。</p>
+<p>google (index 2).</p>
+<p class="url">http://www.google.com (index 3)。</p>
+
+</body>
+</html>

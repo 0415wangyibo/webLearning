@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>页面上显示时钟：</p>
+<p id="demo"></p>
+<button onclick="myStartFunction()">开始</button>
+<button onclick="myStopFunction()">停止</button>
+<script>
+    var myVar;
+    function myStartFunction() {
+        myVar=setInterval(function(){myTimer()},1000);
+    }
+    function myTimer(){
+        var d=new Date();
+        var t=d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML=t;
+    }
+    function myStopFunction(){
+        clearInterval(myVar);
+    }
+</script>
+
+</body>
+</html>

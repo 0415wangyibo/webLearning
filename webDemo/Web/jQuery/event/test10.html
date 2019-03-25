@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //当input获得焦点时将display属性改为在一行显示，修改过程持续两秒
+            $("input").focus(function(){
+                $("span").css("display","inline").fadeOut(2000);
+            });
+        });
+    </script>
+    <style>
+        span
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+<input>
+<span>请输入你的电话号码?</span>
+<p>点击输入框获取焦点。</p>
+
+</body>
+</html>

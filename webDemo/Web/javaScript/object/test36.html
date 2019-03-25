@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo">点击按钮截取数组下标 1 到 2 的元素。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction(){
+        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        var citrus = fruits.slice(1,3);
+        var x=document.getElementById("demo");
+        x.innerHTML=citrus;
+    }
+</script>
+
+</body>
+</html>

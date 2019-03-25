@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h1 id="id1">我的标题 1</h1>
+<button type="button" onclick="myFunction()">
+    点我!
+</button>
+<script>
+    var x = 0;
+
+    function myFunction() {
+        x++;
+        if(x%2){
+            document.getElementById("id1").style.color = "red";
+        }else {
+            document.getElementById("id1").style.color = "blue";
+        }
+    }
+</script>
+
+</body>
+</html>

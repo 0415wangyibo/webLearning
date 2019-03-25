@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visibilitychange 应用</title>
+</head>
+<style>
+    #div1,#div2,#div3,#div4{
+        width:100%;
+        height:500px;
+        margin-bottom: 100px;
+        background-color: gray;
+    }
+</style>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div id="div4">div4</div>
+<script>
+    window.onload=function(){
+// 各种浏览器兼容
+        var hidden, state, visibilityChange;
+        if (typeof document.hidden !== "undefined") {
+            hidden = "hidden";
+            visibilityChange = "visibilitychange";
+            state = "visibilityState";
+        } else if (typeof document.mozHidden !== "undefined") {
+            hidden = "mozHidden";
+            visibilityChange = "mozvisibilitychange";
+            state = "mozVisibilityState";
+        } else if (typeof document.msHidden !== "undefined") {
+            hidden = "msHidden";
+            visibilityChange = "msvisibilitychange";
+            state = "msVisibilityState";
+        } else if (typeof document.webkitHidden !== "undefined") {
+            hidden = "webkitHidden";
+            visibilityChange = "webkitvisibilitychange";
+            state = "webkitVisibilityState";
+        }
+
+// 添加监听器，在title里显示状态变化
+        document.addEventListener(visibilityChange, function() {
+            document.title = document[state];
+        }, false);
+
+// 初始化
+        document.title = document[state];
+
+
+//判断某个元素是否在用户可见区域
+        function elementVisible(ele){
+            console.log(ele.offsetTop);//元素到“文档”顶部的距离
+            console.log(document.body.scrollTop);//页面滚动的距离
+            console.log(window.screen.availHeight);//屏幕可用工作区高度
+            var bottomNum=ele.offsetTop-window.screen.availHeight;
+            var top=ele.offsetTop;
+//当滚动的距离等于bottomNum的时候说明这个元素已经被滚动到浏览器底部，当等于to的时候，说明元素顶部已经在浏览器顶部（如果需要计算完全显示完全隐藏可以把元素的高度也计算在内）
+            if(bottomNum<document.body.scrollTop&&document.body.scrollTop<top){
+                console.log(true);
+            }else{
+                console.log(false)
+            }
+        }
+
+
+        window.onscroll=function(){
+            elementVisible(document.getElementById('div3'));
+        }
+
+
+    }
+
+
+    // 网页可见区域宽： document.body.clientWidth 
+    // 网页可见区域高： document.body.clientHeight 
+    // 网页可见区域宽： document.body.offsetWidth (包括边线的宽) 
+    // 网页可见区域高： document.body.offsetHeight (包括边线的高) 
+    // 网页正文全文宽： document.body.scrollWidth 
+    // 网页正文全文高： document.body.scrollHeight 
+    // 网页被卷去的高： document.body.scrollTop 
+    // 网页被卷去的左： document.body.scrollLeft 
+    // 网页正文部分上： window.screenTop 
+    // 网页正文部分左： window.screenLeft 
+    // 屏幕分辨率的高： window.screen.height 
+    // 屏幕分辨率的宽： window.screen.width 
+    // 屏幕可用工作区高度： window.screen.availHeight 
+    // 屏幕可用工作区宽度： window.screen.availWidth 
+
+
+    // HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth 
+    // scrollHeight: 获取对象的滚动高度。 
+    // scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 
+    // scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 
+    // scrollWidth:获取对象的滚动宽度 
+    // offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度 
+    // offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置 
+    // offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置 
+    // event.clientX 相对文档的水平座标 
+    // event.clientY 相对文档的垂直座标 
+    // event.offsetX 相对容器的水平坐标 
+    // event.offsetY 相对容器的垂直坐标 
+    // document.documentElement.scrollTop 垂直方向滚动的值 
+    // event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量 
+</script>
+
+
+</body>
+</html>

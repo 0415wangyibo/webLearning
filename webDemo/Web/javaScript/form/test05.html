@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<!--检验邮箱有效性，如果后缀不是.com、.net、.cn结尾，则判定不是一个合法邮箱-->
+<head>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["email"].value;
+            var atpos = x.indexOf("@");
+            console.log(atpos);
+            var dotpos = x.lastIndexOf(".");
+            var subName = x.substring(dotpos + 1, x.length);
+            console.log(dotpos);
+            console.log(subName);
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length || (!subName.match("com") && !subName.match("cn") && !subName.match("net"))) {
+                alert("不是一个有效的 e-mail 地址");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form name="myForm" action="http://192.168.21.29:8055//test/email" onsubmit="return validateForm();" method="post">
+    Email: <input type="text" name="email">
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>

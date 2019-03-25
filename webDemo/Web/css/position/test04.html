@@ -1,0 +1,67 @@
+<html>
+<!--判断某个元素是否可见，如果不可见则-->
+<head>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+        button {margin:5px;}
+        #see { background-color: green; color:yellow;}
+    </style>
+</head>
+<body style="font-size:12px; line-height:25px;">
+<div id="divScroll" style="width:300px;height:200px;overflow-y:scroll;border:1px solid gray;">
+    <button id="b01">点击我哦</button><br />
+    <button id="b02">点击我哦</button><br />
+    <button id="b03">点击我哦</button><br />
+    <button id="b04">点击我哦</button><br />
+    <button id="b05">点击我哦</button><br />
+    <button id="b06">点击我哦</button><br />
+    <button id="b07">点击我哦</button><br />
+    <button id="b08">点击我哦</button><br />
+    <button id="see">看见我不</button><br />
+    <button id="b09">点击我哦</button><br />
+</div>
+
+<div style="width:300px; text-align:center; padding-top:5px;">
+    <!-- 如果元素不可见，让其可见 onclick -->
+    <a href="javascript:void(0)" onclick="if(!isEleInView('see')) letEleInView('see');">
+        如果“看见我不”不在可见区域，则让其可见
+    </a>
+</div>
+
+<script type="text/javascript">
+    /** 元素是否处于父容器的可见区域 */
+    function isEleInView(objId){
+        // 取得其父容器，此例为指定id的div
+        var div = document.getElementById("divScroll");
+        var ele = document.getElementById(objId);
+        var offsetTopIn = ele.offsetTop - div.offsetTop;
+
+        var _scrollTop = div.scrollTop;
+        var _scrollHeight = div.scrollHeight;
+        var _height = div.clientHeight;
+        // 可见范围即父容器滚动条当前位置 至 父容器高度这个范围
+        if(offsetTopIn >= _scrollTop && offsetTopIn <= _scrollTop + _height){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /** 元素置于父容器的可见区域 */
+    function letEleInView(objId){
+        var div = document.getElementById("divScroll");
+        var ele = document.getElementById(objId);
+        var offsetTopIn = ele.offsetTop - div.offsetTop;
+        // 当元素在最后等于同父容器高度的一块内，则置滚动条为最底端即可
+        // 否则将滚动条的当前位置置于元素位置。
+        //（当然以下只保留 div.scrollTop = offsetTopIn; 也是可以的，因为滚动条位置超过最大位置时会自动取最大值）
+        if(offsetTopIn >= div.scrollHeight - div.clientHeight){
+            div.scrollTop = div.scrollHeight - div.clientHeight;
+        }else{
+            div.scrollTop = offsetTopIn;
+        }
+    }
+</script>
+
+</body>
+</html>

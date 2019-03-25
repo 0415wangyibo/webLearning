@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        x=0;
+        $(document).ready(function(){
+            //对div滚动次数进行统计
+            $("div").scroll(function(){
+                $("span").text(x+=1);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>尝试滚动 div 中的滚动条</p>
+<div style="border:1px solid black;width:200px;height:100px;overflow:scroll;">菜鸟教程 —— 学的不仅是技术，更是梦想！菜鸟教程 —— 学的不仅是技术，更是梦想！
+    <br><br>
+    菜鸟教程 —— 学的不仅是技术，更是梦想！菜鸟教程 —— 学的不仅是技术，更是梦想！</div>
+<p>滚动了 <span>0</span> 次。</p>
+
+</body>
+</html>

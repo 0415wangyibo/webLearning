@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.post("http://192.168.21.29:8055//test/fullName",{
+                        firstName:"菜",
+                        lastName:"鸟"
+                    },
+                    function(data,status){
+                        if(status=="success"){
+                            try {
+                                if(data.code==0) {
+                                    $("#test").text(data.data);
+                                }else {
+                                    $("#test").text(data.msg);
+                                }
+                            } catch (e) {
+                                alert("错误");
+                            }
+                        }else {
+                            alert("服务器端异常");
+                        }
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+<p id="test"></p>
+<button>发送一个 HTTP POST 请求页面并获取返回内容</button>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<div id="result"></div>
+<script>
+    if(typeof(Storage)!=="undefined")
+    {
+        localStorage.sitename="test";
+        document.getElementById("result").innerHTML="网站名：" + localStorage.sitename;
+    }
+    else
+    {
+        document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+    }
+</script>
+
+</body>
+</html>

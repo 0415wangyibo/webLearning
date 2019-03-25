@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>下拉菜单实例|菜鸟教程(runoob.com)</title>
+    <meta charset="utf-8">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>下拉图片</h2>
+<p>移动鼠标到图片上显示下拉内容。</p>
+
+<div class="dropdown">
+    <img src="http://www.runoob.com/wp-content/uploads/2015/09/banner.jpg" alt="Trolltunga Norway" width="100" height="50">
+    <div class="dropdown-content">
+        <img src="http://www.runoob.com/wp-content/uploads/2015/09/banner.jpg" alt="Trolltunga Norway" width="400" height="200">
+        <div class="desc">学的不仅是技术，更是梦想！</div>
+    </div>
+</div>
+
+</body>
+</html>

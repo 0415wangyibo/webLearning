@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div
+        {
+            width:100px;
+            height:100px;
+            background:red;
+            animation:myfirst 5s;
+            -moz-animation:myfirst 5s; /* Firefox */
+            -webkit-animation:myfirst 5s; /* Safari and Chrome */
+            -o-animation:myfirst 5s; /* Opera */
+        }
+
+        @keyframes myfirst
+        {
+            0%   {background:red;}
+            25%  {background:yellow;}
+            50%  {background:blue;}
+            100% {background:green;}
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            0%   {background:red;}
+            25%  {background:yellow;}
+            50%  {background:blue;}
+            100% {background:green;}
+        }
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+            0%   {background:red;}
+            25%  {background:yellow;}
+            50%  {background:blue;}
+            100% {background:green;}
+        }
+
+        @-o-keyframes myfirst /* Opera */
+        {
+            0%   {background:red;}
+            25%  {background:yellow;}
+            50%  {background:blue;}
+            100% {background:green;}
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+
+<p><b>注释：</b>当动画完成时，会变回初始的样式。</p>
+
+
+<p><b>注意:</b> 该实例在 Internet Explorer 9 及更早 IE 版本是无效的。</p>
+
+</body>
+</html>

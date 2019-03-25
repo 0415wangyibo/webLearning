@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript <b>this</b> 关键字</h2>
+
+<p>函数中，默认情况下，<b>this</b> 指向全局对象。</p>
+<p>严格模式下，<b>this</b> 为 <b>undefined</b>，因为严格模式下不允许默认绑定:</p>
+
+<p id="demo"></p>
+
+<script>
+    "use strict";
+    document.getElementById("demo").innerHTML = myFunction();
+    function myFunction() {
+        return this;
+    }
+</script>
+
+</body>
+</html>

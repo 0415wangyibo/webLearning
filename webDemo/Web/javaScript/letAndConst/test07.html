@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript 全局变量</h2>
+
+<p>使用 let 关键字声明的全局作用域变量不属于 window 对象。</p>
+
+<p id="demo"></p>
+
+<script>
+    let carName = "Volvo";
+
+    // 不能使用 window.carName 访问变量
+    document.getElementById("demo").innerHTML = "I can not display " + window.carName;
+</script>
+
+</body>
+</html>

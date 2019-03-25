@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo">单击按钮显示数组。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction() {
+        var str = "a,b,c,d,e,f";
+        var n = str.split(",");
+        var text = "";
+        for(var i in n){
+            text = text + " " + n[i];
+        }
+        document.getElementById("demo").innerHTML =text;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <style>
+        #panel,#flip
+        {
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel
+        {
+            padding:50px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<button id="stop">停止滑动</button>
+<div id="flip">点我向下滑动面板</div>
+<div id="panel">Hello world!</div>
+<script>
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideDown(5000);
+            $("#panel").slideUp(5000);
+        });
+        //传入true可以停下所有的动画
+        $("#stop").click(function(){
+            $("#panel").stop(true);
+        });
+    });
+</script>
+</body>
+</html>

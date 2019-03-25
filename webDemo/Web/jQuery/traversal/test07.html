@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .descendants *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //查询div后辈元素为span的元素
+            $("div").find("span").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (当前元素)
+    <p>p (儿子元素)
+        <span>span (孙子元素)</span>
+    </p>
+    <p>p (儿子元素)
+        <span>span (孙子元素)</span>
+    </p>
+</div>
+
+</body>
+</html>

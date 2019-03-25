@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //当按键被按下时input的背景颜色变为黄色
+            $("input").keydown(function(){
+                $("input").css("background-color","yellow");
+            });
+            //当按键抬起时input的背景颜色变为粉色
+            $("input").keyup(function(){
+                $("input").css("background-color","pink");
+            });
+        });
+    </script>
+</head>
+<body>
+
+输入你的名字: <input type="text">
+<p>在以上输入框中输入你的名字。在按键按下后输入框背景颜色会改变。</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //图片加载完毕后进行通知
+            $("img").load(function(){
+                alert("图片已载入");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<img src="http://www.runoob.com/wp-content/uploads/2015/11/rock600x400.jpg" alt="图片文字描述" width="304" height="236">
+<p><b>注意:</b> 这个事件在不同浏览器效果有所不同，如果图片已缓存该事件则不会触发。</p>
+
+</body>
+</html>

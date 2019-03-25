@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>
+    如果你使用名字作为索引，当访问数组时，JavaScript 会把数组重新定义为标准对象，数组的方法及属性将不能再使用，否则会产生错误:。
+</p>
+<p id="demo"></p>
+<p id="test"></p>
+<script>
+    var person = [];
+    person["firstName"] = "John";
+    person["lastName"] = "Doe";
+    person["age"] = 46;
+    document.getElementById("demo").innerHTML =
+        person[0] + " " + person.length;
+    document.getElementById("test").innerHTML =
+        person["firstName"]+ " ";
+</script>
+
+</body>
+</html>

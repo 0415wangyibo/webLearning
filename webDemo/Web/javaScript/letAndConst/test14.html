@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>我们不能对常量数组重新赋值：</p>
+
+<p id="demo"></p>
+
+<script>
+    try {
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars = ["Toyota", "Volvo", "Audi"];
+    }
+    catch (err) {
+        document.getElementById("demo").innerHTML = err;
+    }
+</script>
+
+</body>
+</html>

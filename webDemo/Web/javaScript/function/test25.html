@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>在一个对象方法中 ，<b>this</b> 的值是对象本身。</p>
+<p id="demo"></p>
+<script>
+    var myObject = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+            return this;
+        }
+    };
+    document.getElementById("demo").innerHTML = myObject.fullName();
+</script>
+
+</body>
+</html>

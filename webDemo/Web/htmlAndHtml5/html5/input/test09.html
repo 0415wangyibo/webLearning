@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+     
+    <title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+<p id="some"></p>
+Points: <input id="test" type="range" name="points" min="1" max="10">
+<input type="button" onclick="getValue()" value="显示">
+<script>
+    function getValue() {
+        var number = document.getElementById("test").value;
+        console.log(number);
+        document.getElementById("some").innerHTML = number;
+    }
+</script>
+
+<p><b>注意:</b> Internet Explorer 9 及更早 IE 版本不支持 type="range"。</p>
+
+</body>
+</html>

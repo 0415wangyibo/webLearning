@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        x=0;
+        $(document).ready(function(){
+            //对重置窗口事件进行监听计数
+            $(window).resize(function(){
+                $("span").text(x+=1);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>窗口重置了 <span>0</span> 次大小。</p>
+<p>尝试重置窗口大小。</p>
+
+</body>
+</html>

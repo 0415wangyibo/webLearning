@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //对鼠标悬停事件进行监听
+            $("p").hover(function(){
+                //鼠标悬停在p标签时改变背景颜色为黄色
+                $("p").css("background-color","yellow");
+            },function(){
+                //当鼠标离开悬停区域后改变背景颜色为粉色
+                $("p").css("background-color","pink");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>鼠标移动到该段落。</p>
+
+</body>
+</html>
