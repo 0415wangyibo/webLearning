@@ -1,3 +1,2 @@
 ﻿# webLearning
-my code demo
-用来记录学习的demo
+记录前端学习使用历程
