@@ -44,7 +44,64 @@ import Test40 from '@/components/Test40'
 import Test41 from '@/components/Test41'
 import Test42 from '@/components/Test42'
 import Test43 from '@/components/Test43'
-import Test44 from '@/components/Test44'
+import Test44 from '@/components/Test44';
+import Element01 from '@/components/Element01';
+import Element02 from '@/components/Element02';
+import Element03 from '@/components/Element03';
+import Element04 from '@/components/Element04';
+import Element05 from '@/components/Element05';
+import Element06 from '@/components/Element06';
+import Element07 from '@/components/Element07';
+import Element08 from '@/components/Element08';
+import Element09 from '@/components/Element09';
+import Element10 from '@/components/Element10';
+import Element11 from '@/components/Element11';
+import Element12 from '@/components/Element12';
+import Element13 from '@/components/Element13';
+import Element14 from '@/components/Element14';
+import Element15 from '@/components/Element15';
+import Element16 from '@/components/Element16';
+import Element17 from '@/components/Element17';
+import Element18 from '@/components/Element18';
+import Element19 from '@/components/Element19';
+import Element20 from '@/components/Element20';
+import Element21 from '@/components/Element21';
+import Element22 from '@/components/Element22';
+import Element23 from '@/components/Element23';
+import Element24 from '@/components/Element24';
+import Element25 from '@/components/Element25';
+import Element26 from '@/components/Element26';
+import Element27 from '@/components/Element27';
+import Element28 from '@/components/Element28';
+import Element29 from '@/components/Element29';
+import Element30 from '@/components/Element30';
+import Element31 from '@/components/Element31';
+import Element32 from '@/components/Element32';
+import Element33 from '@/components/Element33';
+import Element34 from '@/components/Element34';
+import Element35 from '@/components/Element35';
+import Element36 from '@/components/Element36';
+import Element37 from '@/components/Element37';
+import Element38 from '@/components/Element38';
+import Element39 from '@/components/Element39';
+import Element40 from '@/components/Element40';
+import Element41 from '@/components/Element41';
+import Element42 from '@/components/Element42';
+import Element43 from '@/components/Element43';
+import Element44 from '@/components/Element44';
+import Element45 from '@/components/Element45';
+import Element46 from '@/components/Element46';
+import Element47 from '@/components/Element47';
+import Element48 from '@/components/Element48';
+import Element49 from '@/components/Element49';
+import Element50 from '@/components/Element50';
+import Element51 from '@/components/Element51';
+import Element52 from '@/components/Element52';
+import Element53 from '@/components/Element53';
+import Element54 from '@/components/Element54';
+import Element55 from '@/components/Element55';
+
+
 
 Vue.use(Router);
 
@@ -274,6 +331,281 @@ export default new Router({
       path: '/test44',
       name: 'Test44',
       component: Test44
+    },
+    {
+      path: '/element01',
+      name: 'Element01',
+      component: Element01
+    },
+    {
+      path: '/element02',
+      name: 'Element02',
+      component: Element02
+    },
+    {
+      path: '/element03',
+      name: 'Element03',
+      component: Element03
+    },
+    {
+      path: '/element04',
+      name: 'Element04',
+      component: Element04
+    },
+    {
+      path: '/element05',
+      name: 'Element05',
+      component: Element05
+    },
+    {
+      path: '/element06',
+      name: 'Element06',
+      component: Element06
+    },
+    {
+      path: '/element07',
+      name: 'Element07',
+      component: Element07
+    },
+    {
+      path: '/element08',
+      name: 'Element08',
+      component: Element08
+    },
+    {
+      path: '/element09',
+      name: 'Element09',
+      component: Element09
+    },
+    {
+      path: '/element10',
+      name: 'Element10',
+      component: Element10
+    },
+    {
+      path: '/element11',
+      name: 'Element11',
+      component: Element11
+    },
+    {
+      path: '/element12',
+      name: 'Element12',
+      component: Element12
+    },
+    {
+      path: '/element13',
+      name: 'Element13',
+      component: Element13
+    },
+    {
+      path: '/element14',
+      name: 'Element14',
+      component: Element14
+    },
+    {
+      path: '/element15',
+      name: 'Element15',
+      component: Element15
+    },
+    {
+      path: '/element16',
+      name: 'Element16',
+      component: Element16
+    },
+    {
+      path: '/element17',
+      name: 'Element17',
+      component: Element17
+    },
+    {
+      path: '/element18',
+      name: 'Element18',
+      component: Element18
+    },
+    {
+      path: '/element19',
+      name: 'Element19',
+      component: Element19
+    },
+    {
+      path: '/element20',
+      name: 'Element20',
+      component: Element20
+    },
+    {
+      path: '/element21',
+      name: 'Element21',
+      component: Element21
+    },
+    {
+      path: '/element22',
+      name: 'Element22',
+      component: Element22
+    },
+    {
+      path: '/element23',
+      name: 'Element23',
+      component: Element23
+    },
+    {
+      path: '/element24',
+      name: 'Element24',
+      component: Element24
+    },
+    {
+      path: '/element25',
+      name: 'Element25',
+      component: Element25
+    },
+    {
+      path: '/element26',
+      name: 'Element26',
+      component: Element26
+    },
+    {
+      path: '/element27',
+      name: 'Element27',
+      component: Element27
+    },
+    {
+      path: '/element28',
+      name: 'Element28',
+      component: Element28
+    },
+    {
+      path: '/element29',
+      name: 'Element29',
+      component: Element29
+    },
+    {
+      path: '/element30',
+      name: 'Element30',
+      component: Element30
+    },
+    {
+      path: '/element31',
+      name: 'Element31',
+      component: Element31
+    },
+    {
+      path: '/element32',
+      name: 'Element32',
+      component: Element32
+    },
+    {
+      path: '/element33',
+      name: 'Element33',
+      component: Element33
+    },
+    {
+      path: '/element34',
+      name: 'Element34',
+      component: Element34
+    },
+    {
+      path: '/element35',
+      name: 'Element35',
+      component: Element35
+    },
+    {
+      path: '/element36',
+      name: 'Element36',
+      component: Element36
+    },
+    {
+      path: '/element37',
+      name: 'Element37',
+      component: Element37
+    },
+    {
+      path: '/element38',
+      name: 'Element38',
+      component: Element38
+    },
+    {
+      path: '/element39',
+      name: 'Element39',
+      component: Element39
+    },
+    {
+      path: '/element40',
+      name: 'Element40',
+      component: Element40
+    },
+    {
+      path: '/element41',
+      name: 'Element41',
+      component: Element41
+    },
+    {
+      path: '/element42',
+      name: 'Element42',
+      component: Element42
+    },
+    {
+      path: '/element43',
+      name: 'Element43',
+      component: Element43
+    },
+    {
+      path: '/element44',
+      name: 'Element44',
+      component: Element44
+    },
+    {
+      path: '/element45',
+      name: 'Element45',
+      component: Element45
+    },
+    {
+      path: '/element46',
+      name: 'Element46',
+      component: Element46
+    },
+    {
+      path: '/element47',
+      name: 'Element47',
+      component: Element47
+    },
+    {
+      path: '/element48',
+      name: 'Element48',
+      component: Element48
+    },
+    {
+      path: '/element49',
+      name: 'Element49',
+      component: Element49
+    },
+    {
+      path: '/element50',
+      name: 'Element50',
+      component: Element50
+    },
+    {
+      path: '/element51',
+      name: 'Element51',
+      component: Element51
+    },
+    {
+      path: '/element52',
+      name: 'Element52',
+      component: Element52
+    },
+    {
+      path: '/element53',
+      name: 'Element53',
+      component: Element53
+    },
+    {
+      path: '/element54',
+      name: 'Element54',
+      component: Element54
+    },
+    {
+      path: '/element55',
+      name: 'Element55',
+      component: Element55
     },
     {
       path: '/*',
